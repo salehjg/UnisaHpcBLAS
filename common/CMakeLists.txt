@@ -1,4 +1,4 @@
-add_library(common "")
+add_library(common STATIC common.h)
 set_target_properties(common PROPERTIES LINKER_LANGUAGE CXX)
 #target_compile_options(common PRIVATE ${DF_FLAGS})
 

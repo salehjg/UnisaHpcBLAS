@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
-project(HpcCourseProjects LANGUAGES CXX)
+project(MyBlas LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
@@ -7,7 +7,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Options
 set(USE_OPENMP ON CACHE BOOL "Use OpenMP for parallelization")
-set(BUILD_MODULE01 ON CACHE BOOL "Build Module 01")
 
 
 
@@ -20,9 +19,5 @@ else()
     message(STATUS "OpenMP not found")
 endif()
 
-add_subdirectory(common)
-
-# Handle Module 01
-if (BUILD_MODULE01)
-    add_subdirectory(module01)
-endif()
+#add_subdirectory(common)
+add_subdirectory(src)
