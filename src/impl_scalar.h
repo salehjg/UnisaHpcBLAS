@@ -4,10 +4,11 @@
 
 #pragma once
 
+#include <memory>
+#include <complex>
+
 class impl_scalar {
 public:
-    void axpy();
-    void gemm();
-    void gemv();
+    float sdot(int32_t n, const float* __restrict x, int32_t incx, const float* __restrict y, int32_t incy);
 };
 

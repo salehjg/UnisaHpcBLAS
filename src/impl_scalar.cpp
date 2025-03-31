@@ -4,15 +4,10 @@
 
 #include "impl_scalar.h"
 
-
-void impl_scalar::axpy() {
-    // Implementation of axpy
-}
-
-void impl_scalar::gemm() {
-    // Implementation of gemm
-}
-
-void impl_scalar::gemv() {
-    // Implementation of gemv
+float impl_scalar::sdot(int32_t n, const float* x, int32_t incx, const float* y, int32_t incy) {
+    float dot_product = 0.0f;
+    for (int32_t i = 0; i < n; ++i) {
+        dot_product += x[i * incx] * y[i * incy];
+    }
+    return dot_product;
 }
